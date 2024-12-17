@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Foro en Línea</title>
+
+  <!-- Añadir scripts de Firebase para la versión no modular -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+</head>
+
+        
+        
+           <header>
+   
+        <h1>Fútbol Total</h1>
+        <nav>
+            <a href="/noticias.html">Noticias</a>
+            <a href="/estadísticas.html">Estadísticas</a>
+            <a href="/horarios.html">Horarios</a>
+            
+              <a href="/FORO.html">FORO</a>
+            <a href="/Desarrolladores de ma página.html">Creadores</a>
+            
+      
+          
+        </header> 
+        
+
+        
+<body>
+  
+
+   
+
+     
+   
+  <div id="auth">
+      <center>
+   
+   <h1>Registrate o inicia Seción</h1>
+  </center>
+   <section>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Correo" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar Sesión</button>
+    </form> <br>
+    <button id="register-btn">Registrarse</button>
+  </div>
+</section>
+  <div id="forum" class="hidden">
+    
+    <center>
+    <h1>Bienvenido al Foro</h1>
+    
+    </center>
+    <form id="post-form">
+      <textarea id="post-content" placeholder="Escribe tu publicación..." required></textarea>
+      <input type="file" id="post-image">
+      <button type="submit">Publicar</button>
+    </form>
+    <div id="posts"></div>
+    <button id="logout-btn">Cerrar Sesión</button>
+  </div>
+  
+</body>
+<script src="/main.js"></script>
+
+</html>
