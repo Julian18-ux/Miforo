@@ -95,7 +95,7 @@ function loadPosts() {
         <p><strong>${post.author}</strong>:</p>
         <p>${post.content}</p>
         ${post.imageUrl ? `<img src="${post.imageUrl}" width="100%">` : ''}
-        <hr></section>
+        <hr></section><br>
       `;
       postsDiv.appendChild(postDiv);
     });
