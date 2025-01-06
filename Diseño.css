@@ -45,3 +45,65 @@ footer {
     color: white;
     margin-top: 20px;
 }
+
+
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 5px 0;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+}
