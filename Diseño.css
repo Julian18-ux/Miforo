@@ -46,31 +46,108 @@ footer {
     margin-top: 20px;
 }
 
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
 
+/* Encabezado */
+header {
+  background-color: #00509e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
 
-/* Estilos para pantallas grandes */
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navegación */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del contenido */
+section#noticias {
+  padding: 20px;
+  margin: 15px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section#noticias h2 {
+  color: #00509e;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+section#noticias article {
+  margin-bottom: 20px;
+}
+
+section#noticias h3 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+section#noticias p {
+  color: #555;
+  font-size: 1rem;
+}
+
+section#noticias a {
+  text-decoration: none;
+  color: #00509e;
+}
+
+/* Responsive: Grandes pantallas */
 @media (min-width: 1024px) {
   body {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   header h1 {
     font-size: 2.5rem;
   }
 
-  section h2 {
+  section#noticias h2 {
     font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+  }
+
+  section#noticias article {
+    padding: 10px 0;
   }
 }
 
-/* Estilos para pantallas medianas (tabletas) */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Responsive: Pantallas medianas (tabletas) */
+@media (max-width: 1023px) and (min-width: 768px) {
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
-  section h2 {
+  section#noticias h2 {
     font-size: 1.8rem;
   }
 
@@ -78,32 +155,47 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 15px;
   }
 
   nav a {
     font-size: 1.1rem;
   }
+
+  section#noticias article {
+    padding: 15px;
+  }
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
+/* Responsive: Móviles */
 @media (max-width: 767px) {
   header h1 {
     font-size: 1.8rem;
   }
 
-  section h2 {
-    font-size: 1.6rem;
-  }
-
-  nav {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
+  section#noticias h2 {
+    font-size: 1.5rem;
   }
 
   nav a {
-    margin: 5px 0;
-    display: inline-block;
+    display: block;
+    margin: 10px 0;
     font-size: 1.2rem;
   }
+
+  section#noticias article {
+    padding: 10px 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+}
+
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
 }
