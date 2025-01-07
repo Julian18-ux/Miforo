@@ -91,7 +91,7 @@ function loadPosts() {
     snapshot.forEach(childSnapshot => {
       const post = childSnapshot.val();
       const postDiv = document.createElement('div');
-      postDiv.innerHTML = `<section>
+      postDiv.innerHTML = `<section id="se">
         <p><strong>${post.author}</strong>:</p>
         <p>${post.content}</p>
         ${post.imageUrl ? `<img src="${post.imageUrl}" width="100%">` : ''}
