@@ -1,4 +1,3 @@
-
 // Inicialización de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyDsLGJh14YvBGmfu4UCOfvzqkyzAkRJQYI",
@@ -58,26 +57,16 @@ document.getElementById('logout-btn').addEventListener('click', () => {
 postForm.addEventListener('submit', e => {
   e.preventDefault();
   const content = document.getElementById('post-content').value;
-  const file = document.getElementById('post-image').files[0];
 
-  if (file) {
-    // Subir imagen a Firebase Storage
-    const storageRef = firebase.storage().ref(`images/${file.name}`);
-    storageRef.put(file).then(snapshot => {
-      snapshot.ref.getDownloadURL().then(url => {
-        savePost(content, url);
-      });
-    });
-  } else {
-    savePost(content, null);
-  }
+  // Guardar publicación en Realtime Database sin imagen
+  savePost(content, null);
 });
 
 // Guardar publicación en Realtime Database
 function savePost(content, imageUrl) {
   firebase.database().ref('posts').push({
     content,
-    imageUrl,
+    imageUrl: imageUrl,  // Ya no se usa imagen, pero se mantiene el parámetro para la estructura
     author: firebase.auth().currentUser.email,
     timestamp: Date.now()
   });
@@ -94,7 +83,6 @@ function loadPosts() {
       postDiv.innerHTML = `<section id="se">
         <p><strong>${post.author}</strong>:</p>
         <p>${post.content}</p>
-        ${post.imageUrl ? `<img src="${post.imageUrl}" width="100%">` : ''}
         <hr></section><br>
       `;
       postsDiv.appendChild(postDiv);
